@@ -27,55 +27,30 @@ const PopUp = ({closePopUp, classShow}) => {
                     </div>
                     <div className='body'>
                         <div className='tasks-container'>
-                            <div className='task-card'>
-                                <div className='task-header'><div className='task-type'>Material · Foro</div></div>
-                                <div className='task-body'>
-                                    <div className='task-title'>Foro S11</div>
-                                    <div style={{display:'flex', gap:'20px', justifyContent:'center',alignItems:'center'}}>
-                                    <div className='task-status por-entregar'>
-                                        <span className='exclamation-icon'>!</span>
-                                        Por entregar
-                                    </div>
-                                    <div class="porc-finished">👁️‍🗨️ 92</div>
-                                    </div>
+                            <div className='task-warning'>
+                                <div style={{display:'flex', alignItems:'center', justifyContent:'center', gap:'10px', marginBottom:'10px'}}>
+                                    <span>☹️</span>
+                                    <div style={{textAlign:'left'}}>Formas parte del 15% de alumnos que aún no envian la actividad. No te descuides</div>
                                 </div>
-                                <div className='task-footer'>
-                                    <div className='date-info'>Desde: 24 de marzo de 2025, 00:00</div>
-                                    <div className='date-info'>Hasta: 22 de julio de 2025, 23:59</div>
-                                </div>
-                            </div>
-                            <div className='task-card'>
-                                <div className='task-header'><div className='task-type'>Material · Foro</div></div>
-                                <div className='task-body'>
-                                    <div className='task-title'>Foro S11</div>
-                                    <div style={{display:'flex', gap:'20px', justifyContent:'center',alignItems:'center'}}>
-                                    <div className='task-status por-entregar'>
-                                        <span className='exclamation-icon'>!</span>
-                                        Por entregar
+                                <div className='task-card'>
+                                    <div className='task-header'><div className='task-type'>Material · Foro</div></div>
+                                    <div className='task-body'>
+                                        <div className='task-title'>Foro S11</div>
+                                        <div className='task-status por-entregar'>
+                                            <span className='exclamation-icon'>!</span>
+                                            Por entregar
+                                        </div>
                                     </div>
-                                    <div class="porc-finished">👁️‍🗨️ 92</div>
+                                    <div className='task-footer'>
+                                        <div className='date-info'>Desde: 24 de marzo de 2025, 00:00</div>
+                                        <div className='date-info'>Hasta: 22 de julio de 2025, 23:59</div>
                                     </div>
-                                </div>
-                                <div className='task-footer'>
-                                    <div className='date-info'>Desde: 24 de marzo de 2025, 00:00</div>
-                                    <div className='date-info'>Hasta: 22 de julio de 2025, 23:59</div>
-                                </div>
-                            </div>
-                            <div className='task-card'>
-                                <div className='task-header'><div className='task-type'>Material · Foro</div></div>
-                                <div className='task-body'>
-                                    <div className='task-title'>Foro S11</div>
-                                    <div style={{display:'flex', gap:'20px', justifyContent:'center',alignItems:'center'}}>
-                                    <div className='task-status por-entregar'>
-                                        <span className='exclamation-icon'>!</span>
-                                        Por entregar
+                                    <div className='progress-container'>
+                                        <div className='progress-bar'>
+                                            <div className='progress-fill active' style={{width:'85%'}}></div>
+                                        </div>
+                                        <div className='progress-text visible'>85% de tus compañeros ya han enviado la actividad</div>
                                     </div>
-                                    <div class="porc-finished">👁️‍🗨️ 92</div>
-                                    </div>
-                                </div>
-                                <div className='task-footer'>
-                                    <div className='date-info'>Desde: 24 de marzo de 2025, 00:00</div>
-                                    <div className='date-info'>Hasta: 22 de julio de 2025, 23:59</div>
                                 </div>
                             </div>
                         </div>
@@ -87,29 +62,69 @@ const PopUp = ({closePopUp, classShow}) => {
                     </div>
                     <div className='body'>
                         <div className='tasks-container'>
-                            <div className='task-card'>
-                                <div className='task-header'><div className='task-type'>Material · Power Point</div></div>
-                                <div className='task-body'>
-                                    <div className='task-title'>S12_s1 - Aplicaciones Web con HIBERNATE</div>
-                                    <div style={{display:'flex', gap:'20px', justifyContent:'center',alignItems:'center'}}>
-                                    <div className='task-status pendiente'>
-                                        <span className='exclamation-icon'>O</span>
-                                        Pendiente
+                            <div className='task-warning'>
+                                <div style={{display:'flex', alignItems:'center', justifyContent:'center', gap:'10px', marginBottom:'10px'}}>
+                                    <span>☹️</span>
+                                    <div style={{textAlign:'left'}}>Formas parte del 15% de alumnos que aún no revisaron este material. Ponte al día con los demas</div>
+                                </div>
+                                <div className='task-card'>
+                                    <div className='task-header'><div className='task-type'>Material · PDF</div></div>
+                                    <div className='task-body'>
+                                        <div className='task-title'>Base de Datos - Calidad de Software</div>
+                                        <div className='task-status pendiente'>
+                                            <span className='exclamation-icon'>O</span>
+                                            Pendiente
+                                        </div>
                                     </div>
-                                    <div class="porc-finished">👁️‍🗨️ 92</div>
+                                    <div className='progress-container'>
+                                        <div className='progress-bar'>
+                                            <div className='progress-fill active' style={{width:'85%'}}></div>
+                                        </div>
+                                        <div className='progress-text visible'>85% de tus compañeros ya han revisado este material</div>
                                     </div>
                                 </div>
                             </div>
-                            <div className='task-card'>
-                                <div className='task-header'><div className='task-type'>Material · Power Point</div></div>
-                                <div className='task-body'>
-                                    <div className='task-title'>S12_s1 - Aplicaciones Web con HIBERNATE</div>
-                                    <div style={{display:'flex', gap:'20px', justifyContent:'center',alignItems:'center'}}>
-                                    <div className='task-status pendiente'>
-                                        <span className='exclamation-icon'>O</span>
-                                        Pendiente
+                            <div className='task-warning'>
+                                <div style={{display:'flex', alignItems:'center', justifyContent:'center', gap:'10px', marginBottom:'10px'}}>
+                                    <span>☹️</span>
+                                    <div style={{textAlign:'left'}}>Formas parte del 15% de alumnos que aún no revisaron este material. Ponte al día con los demas</div>
+                                </div>
+                                <div className='task-card'>
+                                    <div className='task-header'><div className='task-type'>Material · PDF</div></div>
+                                    <div className='task-body'>
+                                        <div className='task-title'>Base de Datos - Calidad de Software</div>
+                                        <div className='task-status pendiente'>
+                                            <span className='exclamation-icon'>O</span>
+                                            Pendiente
+                                        </div>
                                     </div>
-                                    <div class="porc-finished">👁️‍🗨️ 92</div>
+                                    <div className='progress-container'>
+                                        <div className='progress-bar'>
+                                            <div className='progress-fill active' style={{width:'85%'}}></div>
+                                        </div>
+                                        <div className='progress-text visible'>85% de tus compañeros ya han revisado este material</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='task-warning'>
+                                <div style={{display:'flex', alignItems:'center', justifyContent:'center', gap:'10px', marginBottom:'10px'}}>
+                                    <span>☹️</span>
+                                    <div style={{textAlign:'left'}}>Formas parte del 15% de alumnos que aún no revisaron este material. Ponte al día con los demas</div>
+                                </div>
+                                <div className='task-card'>
+                                    <div className='task-header'><div className='task-type'>Material · PDF</div></div>
+                                    <div className='task-body'>
+                                        <div className='task-title'>Base de Datos - Calidad de Software</div>
+                                        <div className='task-status pendiente'>
+                                            <span className='exclamation-icon'>O</span>
+                                            Pendiente
+                                        </div>
+                                    </div>
+                                    <div className='progress-container'>
+                                        <div className='progress-bar'>
+                                            <div className='progress-fill active' style={{width:'85%'}}></div>
+                                        </div>
+                                        <div className='progress-text visible'>85% de tus compañeros ya han revisado este material</div>
                                     </div>
                                 </div>
                             </div>
@@ -123,56 +138,20 @@ const PopUp = ({closePopUp, classShow}) => {
                     <div className='body'>
                         <div className='tasks-container'>
                             <div className='task-card'>
-                                <div className='task-header'><div className='task-type'>Material · PDF</div></div>
-                                <div className='task-body'>
-                                    <div className='task-title'>Base de Datos - Calidad de Software</div>
-                                    <div style={{display:'flex', gap:'20px', justifyContent:'center',alignItems:'center'}}>
-                                    <div className='task-status revisado'>
-                                        <span className='exclamation-icon'>✔</span>
-                                        Revisado
+                                    <div className='task-header'><div className='task-type'>Material · POWER POINT</div></div>
+                                    <div className='task-body'>
+                                        <div className='task-title'>S12_s1 - Aplicaciones Web con HIBERNATE</div>
+                                        <div className='task-status revisado'>
+                                            <span className='exclamation-icon'>!</span>
+                                            Revisado
+                                        </div>
                                     </div>
-                                    <div class="porc-finished">👁️‍🗨️ 92</div>
+                                    <div className='progress-container'>
+                                        <div className='progress-bar'>
+                                            <div className='progress-fill active' style={{width:'85%'}}></div>
+                                        </div>
+                                        <div className='progress-text visible'>85% de tus compañeros ya han revisado este material</div>
                                     </div>
-                                </div>
-                            </div>
-                            <div className='task-card'>
-                                <div className='task-header'><div className='task-type'>Material · PDF</div></div>
-                                <div className='task-body'>
-                                    <div className='task-title'>Base de Datos - Calidad de Software</div>
-                                    <div style={{display:'flex', gap:'20px', justifyContent:'center',alignItems:'center'}}>
-                                    <div className='task-status revisado'>
-                                        <span className='exclamation-icon'>✔</span>
-                                        Revisado
-                                    </div>
-                                    <div class="porc-finished">👁️‍🗨️ 92</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className='task-card'>
-                                <div className='task-header'><div className='task-type'>Material · PDF</div></div>
-                                <div className='task-body'>
-                                    <div className='task-title'>Base de Datos - Calidad de Software</div>
-                                    <div style={{display:'flex', gap:'20px', justifyContent:'center',alignItems:'center'}}>
-                                    <div className='task-status revisado'>
-                                        <span className='exclamation-icon'>✔</span>
-                                        Revisado
-                                    </div>
-                                    <div class="porc-finished">👁️‍🗨️ 92</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className='task-card'>
-                                <div className='task-header'><div className='task-type'>Material · PDF</div></div>
-                                <div className='task-body'>
-                                    <div className='task-title'>Base de Datos - Calidad de Software</div>
-                                    <div style={{display:'flex', gap:'20px', justifyContent:'center',alignItems:'center'}}>
-                                    <div className='task-status revisado'>
-                                        <span className='exclamation-icon'>✔</span>
-                                        Revisado
-                                    </div>
-                                    <div class="porc-finished">👁️‍🗨️ 92</div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
