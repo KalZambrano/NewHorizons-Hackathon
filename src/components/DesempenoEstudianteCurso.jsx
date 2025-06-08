@@ -33,11 +33,10 @@ const getColor = (rango, actualRango) => {
   return rango === actualRango ? resaltado[rango] : colores[rango];
 };
 
-const DesempenoEstudiante = ({ estudiantes, estudianteActual, semana, onClose, maxPuntos }) => {
-  const getPuntosSemana = (e) => {
-    const numeroSemana = semana.match(/\d+/)?.[0]; // Extrae "01", "02", etc.
-    return e[`puntosS${parseInt(numeroSemana)}`] ?? 0;
-  };
+const DesempenoEstudianteCurso = ({ estudiantes, estudianteActual, onClose, maxPuntos }) => {
+  const getPuntos = (e) => {
+    return e.puntosTotales;
+  };  
 
   const getRango = (porcentaje) => {
     if (porcentaje >= 90) return 'Excelente (90–100)';
@@ -57,13 +56,13 @@ const DesempenoEstudiante = ({ estudiantes, estudianteActual, semana, onClose, m
   const conteoPorRango = {};
   rangos.forEach(r => (conteoPorRango[r] = 0));
   estudiantes.forEach(e => {
-    const puntosSemana = getPuntosSemana(e);
-    const porcentaje = (puntosSemana / maxPuntos) * 100;
+    const puntos = e.puntosTotales;
+    const porcentaje = (puntos / maxPuntos) * 100;
     const r = getRango(porcentaje);
     conteoPorRango[r]++;
   });
 
-  const puntosEstudiante = getPuntosSemana(estudianteActual);
+  const puntosEstudiante = getPuntos(estudianteActual);
   const porcentajeEstudiante = (puntosEstudiante / maxPuntos) * 100;
   const rangoEstudiante = getRango(porcentajeEstudiante);
 
@@ -127,4 +126,4 @@ const DesempenoEstudiante = ({ estudiantes, estudianteActual, semana, onClose, m
   );
 };
 
-export default DesempenoEstudiante;
+export default DesempenoEstudianteCurso;

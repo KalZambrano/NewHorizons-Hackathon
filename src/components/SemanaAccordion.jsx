@@ -3,7 +3,7 @@ import ItemContenido from './ItemContenido';
 import RankingModal from './RankingModal';
 import DesempenoEstudiante from './DesempenoEstudiante';
 
-const SemanaAccordion = ({ semana, contenidos, estudiantes, estudianteActual }) => {
+const SemanaAccordion = ({ semana, contenidos, estudiantes, estudianteActual, maxPuntos }) => {
   const [abierto, setAbierto] = useState(false);
   const [mostrarRanking, setMostrarRanking] = useState(false);
   const [mostrarDesempeno, setMostrarDesempeno] = useState(false);
@@ -38,6 +38,8 @@ const SemanaAccordion = ({ semana, contenidos, estudiantes, estudianteActual }) 
       {mostrarRanking && (
         <RankingModal
           estudiantes={estudiantes}
+          maxPuntos={maxPuntos}
+          semana={semana}
           onClose={() => setMostrarRanking(false)}
         />
       )}
@@ -46,6 +48,8 @@ const SemanaAccordion = ({ semana, contenidos, estudiantes, estudianteActual }) 
         <DesempenoEstudiante
           estudiantes={estudiantes}
           estudianteActual={estudianteActual}
+          maxPuntos={maxPuntos}
+          semana={semana} 
           onClose={() => setMostrarDesempeno(false)}
         />
       )}

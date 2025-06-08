@@ -30,13 +30,10 @@ const getBorderColor = (puntos) => {
   return 'rgba(255, 99, 132, 1)';
 };
 
-const RankingModal = ({ estudiantes, onClose, maxPuntos, semana }) => {
-  // Extraer número de semana
-  const numeroSemana = parseInt(semana.match(/\d+/)?.[0]);
-
+const RankingModalCurso = ({ estudiantes, onClose, maxPuntos }) => {
   const datosEstudiantes = estudiantes.map(e => {
-    const puntosSemana = e[`puntosS${numeroSemana}`] ?? 0;
-    const porcentaje = (puntosSemana / maxPuntos) * 100;
+    const puntos = e.puntosTotales;
+    const porcentaje = (puntos / maxPuntos) * 100;
     return {
       nombre: e.nombre,
       porcentaje,
@@ -96,4 +93,4 @@ const RankingModal = ({ estudiantes, onClose, maxPuntos, semana }) => {
   );
 };
 
-export default RankingModal;
+export default RankingModalCurso;
